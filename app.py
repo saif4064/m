@@ -77,7 +77,7 @@ def predict():
    
     return render_template('index.html',prediction_text="OPPS Data Not found")
 if __name__=="__main__":
-    app.run(debug=True, use_reloader=False)
+    app.run(host='0.0.0.0', port=8080)
 
 
 
