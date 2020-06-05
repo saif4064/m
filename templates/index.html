@@ -1,0 +1,160 @@
+<html>
+<head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		 <title>COVID-19</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+        </head>
+		<style>
+		.saif{
+	          background-color:#728FCE;
+			  width:480px;
+			  height:450px;
+			  position:relative;
+			  left:320px;
+			  margin-top:-40px;
+			  
+			  
+			  
+      }
+	  
+	  .bak{
+	  background-color:#BCC6CC;
+	  width:400px;
+	  height:500px;
+	  
+	  }
+	  .body{
+	  background-color:#BCC6CC;
+	  }
+	  .ba{
+	  background-color:#BCC6CC;
+	  }
+	  .paj{
+	  
+	  font-size:100px;
+
+      font-style: oblique;
+      position:relative;
+      
+	 left:320px;
+      color: #151B54;
+      background:#BCC6CC;
+      text-shadow: 0 9px #1F45FC, -5px 0 #FFFFFF, -1px 2px #1F45FC, -2px 1px #FFFFFF, -2px 3px #1F45FC, -3px 2px #1F45FC, -3px 4px #1F45FC, -4px 3px #FFFFFF, -4px 5px #1F45FC, -5px 4px #FFFFFF, -5px 6px #1F45FC, -6px 5px #FFFFFF, -6px 7px #1F45FC, -7px 6px #FFFFFF, -7px 8px #1F45FC, -8px 7px #FFFFFF;
+	  }
+	  .gh{
+	   font-size:70px;
+	   position:relative;
+	   right:180px;
+	   left:-250px;
+	  }
+	  .hk{
+	  font-size:70px;
+	  position:relative;
+	  margin-top:-150px;
+	  right:19px;
+	  }
+	  .lk{
+	  font-size:30px;
+	  position:relative;
+	  right:90px;
+	  margin-top:-15px;
+	  }
+	  .fg{
+	  font-size:30px;
+	  margin-top:50px;
+	  position:relative;
+	  right:50px;
+	  
+	  
+	  
+	  }
+	  .hy{
+	  
+	  position:relative;
+	  left:50px;
+	  margin-top:70px;
+	  }
+	  .hy1{
+	  position:relative;
+	  left:400px;
+	 
+	  margin-top:-520px;
+	  
+	  }
+	  .hy2{
+	  position:relative;
+	  left:750px;
+	  
+	  margin-top:-530px;
+	  
+	  }
+	  .hy3{
+	  position:relative;
+	  left:1100px;
+	  margin-top:20px;
+	  margin-top:-450px;
+	  
+	  }
+	  .hy5{
+	  
+	  position:relative;
+	  left:1100px;
+	  margin-top:-520px;
+	  }
+	  .jh{
+	  
+	  font-size:40px;
+	  color:black;
+	  }
+	  .yu{
+	  font-size:30px;
+	  color:black;
+	  }
+	  .yu1{
+	  color:red;
+	  font-size:40px;
+	  position:relative;
+	  right:190px;
+	  
+	  
+	  }
+	  
+		</style>
+		
+   <body class="ba">
+   <P class="paj">COVID-19 detector</p>
+   <div class="saif">
+   <form class="saif"action = "{{url_for('predict')}}" method = "POST" 
+         enctype = "multipart/form-data">
+		 <p class="gh">Upload</p>
+		 <p class="hk">Chest X-ray</p>
+         <input class="lk" type = "file" name = "file1" />
+         <input class="fg" type = "submit">
+		 <h1 class="yu1">{{prediction_text}}</h1>
+
+      </form>
+   </div>
+   <div class="hy" class="bak">
+    
+	<img src="{{url_for('static', filename='auntminnie-d-2020_01_28_23_51_6665_2020_01_28_Vietnam_coronavirus.JPEG')}}"width="300" height="400" /> 
+	<p class="jh">COVID X-ray</p>
+	</div>
+	<div class="hy1" class="bak">
+    <img src="{{url_for('static', filename='SARS-10.1148rg.242035193-g04mr34g07a-Fig7a-day5.JPEG')}}"width="300" height="400" /> 
+	<p class="jh">SARS X-ray</p>
+	</div>
+	<div class="hy2" class="bak">
+    <img src="{{url_for('static', filename='pneumocystis-pneumonia-2-PA.png')}}"width="300" height="400" /> 
+	<p class="jh">Pneumonia X-ray</p>
+	</div>
+	<div class="hy5" class="bak">
+    <img src="{{url_for('static', filename='ards-secondary-to-tiger-snake-bite.png')}}"width="300" height="400" /> 
+	<p class="jh">Ards X-ray</p>
+	</div>
+	<p class="yu">Developed BY:Jack</p>
+	
+	
+	
+   </body>
+</html>
